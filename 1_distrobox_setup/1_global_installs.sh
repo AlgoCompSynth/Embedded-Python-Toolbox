@@ -2,16 +2,18 @@
 
 set -e
 
+./add_git_ppa.sh
 ./unminimize.sh
 
 echo "Defining LOGFILE"
-export LOGFILE=$PWD/1_base_packages.log
+export LOGFILE=$PWD/1_global_installs.log
 rm --force $LOGFILE
 
 echo "Installing base packages"
 export DEBIAN_FRONTEND=noninteractive
 /usr/bin/time sudo apt-get install --assume-yes \
   apt-file \
+  bash-completion \
   build-essential \
   cmake \
   curl \

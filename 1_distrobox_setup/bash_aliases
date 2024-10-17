@@ -13,5 +13,3 @@ export VISUAL=/usr/bin/vim
 export TZ=America/Los_Angeles
 
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-eval "$(starship init bash)"

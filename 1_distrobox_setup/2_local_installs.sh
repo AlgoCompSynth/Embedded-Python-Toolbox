@@ -2,15 +2,14 @@
 
 set -e
 
-echo "Setting base configuration files"
-cp bashrc $HOME/.bashrc
-cp bash_aliases $HOME/.bash_aliases
-cp vimrc $HOME/.vimrc
-
 echo "Creating $HOME/.local/bin and $HOME/bin"
 mkdir --parents $HOME/.local/bin
 mkdir --parents $HOME/bin
-cp edit_me_then_run_4_git_config.sh $HOME/.local/bin
+
+echo "Setting base configuration files"
+cp bashrc $HOME/.bashrc; source bashrc
+cp bash_aliases $HOME/.bash_aliases; source bash_aliases
+cp vimrc $HOME/.vimrc
 
 echo "Installing Meslo nerd fonts"
 pushd /tmp
@@ -32,8 +31,13 @@ pushd /tmp
 echo "Installing Starship"
 export BIN_DIR=$HOME/.local/bin
 curl -sS https://starship.rs/install.sh | sh
+mkdir --parents $HOME/.config
+starship preset nerd-font-symbols -o $HOME/.config/starship.toml
 
 echo "Adding Starship prompt to bash"
 echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
+
+echo ""
+echo "Restart bash to get new Starship prompt"
 
 echo "Finished"

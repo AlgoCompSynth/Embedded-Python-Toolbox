@@ -6,11 +6,6 @@ echo "Defining LOGFILE"
 export LOGFILE=$PWD/unminimize.log
 rm --force $LOGFILE
 
-echo "Adding git PPA"
-export DEBIAN_FRONTEND=noninteractive
-/usr/bin/time sudo add-apt-repository --yes \
-  ppa:git-core/ppa
-
 echo "Updating package cache"
 /usr/bin/time sudo apt-get update \
   >> $LOGFILE 2>&1
