@@ -25,18 +25,30 @@ echo "DBX_CONTAINER_DIRECTORY: $DBX_CONTAINER_DIRECTORY"
 export DBX_CONTAINER_HOSTNAME="$DBX_CONTAINER_NAME"
 echo "DBX_CONTAINER_HOSTNAME: $DBX_CONTAINER_HOSTNAME"
 
+# Arm compiler
+# https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
+#https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-x86_64-arm-none-eabi.tar.xz
+echo ""
+export ARM_COMPILER_RELEASE="13.3.rel1"
+echo "ARM_COMPILER_RELEASE: $ARM_COMPILER_RELEASE"
+export ARM_COMPILER_TARBALL="arm-gnu-toolchain-$ARM_COMPILER_RELEASE-x86_64-arm-none-eabi.tar.xz"
+echo "ARM_COMPILER_TARBALL: $ARM_COMPILER_TARBALL"
+export ARM_COMPILER_URL="https://developer.arm.com/-/media/Files/downloads/gnu/$ARM_COMPILER_RELEASE/binrel/$ARM_COMPILER_TARBALL"
+echo "ARM_COMPILER_URL: $ARM_COMPILER_URL"
+export ARM_COMPILER_PATH="$HOME/.local"
+echo "ARM_COMPILER_PATH: $ARM_COMPILER_PATH"
+
 # RISC-V compiler
 # https://www.embecosm.com/resources/tool-chain-downloads/#corev
 # recommended by Raspberry Pi Pico C/C++ SDK documentation
-export RISCV_COMPILER_VERSION="corev-openhw-gcc-ubuntu2204-20240530"
-export RISCV_COMPILER_TARBALL="$RISCV_COMPILER_VERSION.tar.gz"
+# https://buildbot.embecosm.com/job/corev-gcc-ubuntu2204/47/artifact/corev-openhw-gcc-ubuntu2204-20240530.tar.gz
+echo ""
+export RISCV_COMPILER_VERSION="ubuntu2204-20240530"
+echo "RISCV_COMPILER_VERSION: $RISCV_COMPILER_VERSION"
+export RISCV_COMPILER_TARBALL="corev-openhw-gcc-$RISCV_COMPILER_VERSION.tar.gz"
+echo "RISCV_COMPILER_TARBALL: $RISCV_COMPILER_TARBALL"
 export RISCV_COMPILER_URL="https://buildbot.embecosm.com/job/corev-gcc-ubuntu2204/47/artifact/$RISCV_COMPILER_TARBALL"
+echo "RISCV_COMPILER_URL: $RISCV_COMPILER_URL"
 export RISCV_COMPILER_PATH="$HOME/.local"
-
-# Arm compiler
-# https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
-export ARM_COMPILER_RELEASE="13.3.rel1"
-export ARM_COMPILER_VERSION="arm-gnu-toolchain-$ARM_COMPILER_RELEASE-x86_64-arm-none-eabi"
-export ARM_COMPILER_TARBALL="$ARM_COMPILER_VERSION.tar.xz"
-export ARM_COMPILER_URL="https://developer.arm.com/-/media/Files/downloads/gnu/$ARM_COMPILER_RELEASE/binrel/$ARM_COMPILER_TARBALL"
-export ARM_COMPILER_PATH="$HOME/.local"
+echo "RISCV_COMPILER_PATH: $RISCV_COMPILER_PATH"
+echo ""
