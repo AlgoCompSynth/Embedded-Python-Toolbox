@@ -14,5 +14,4 @@ export TZ=America/Los_Angeles
 
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
-. "$HOME/.cargo/env"
 eval "$(starship init bash)"

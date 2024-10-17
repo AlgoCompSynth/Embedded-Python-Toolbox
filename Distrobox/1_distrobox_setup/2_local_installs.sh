@@ -28,15 +28,10 @@ pushd /tmp
 
   popd
 
-echo "Installing Rust command line"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-echo "Activating Rust command line"
-. "$HOME/.cargo/env"
-
 # https://starship.rs/guide/#%F0%9F%9A%80-installation
 echo "Installing Starship"
-cargo install starship --locked
+export BIN_DIR=$HOME/.local/bin
+curl -sS https://starship.rs/install.sh | sh
 
 echo "Adding Starship prompt to bash"
 echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
