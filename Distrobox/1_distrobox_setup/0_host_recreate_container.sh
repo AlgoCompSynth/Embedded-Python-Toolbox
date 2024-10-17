@@ -6,6 +6,9 @@ echo ""
 echo "Setting environment variables"
 source ../set_envars
 
+echo "Removing old logfiles"
+rm --force *.log
+
 echo ""
 echo "Removing any existing distrobox container $DBX_CONTAINER_NAME"
 distrobox rm --force $DBX_CONTAINER_NAME
