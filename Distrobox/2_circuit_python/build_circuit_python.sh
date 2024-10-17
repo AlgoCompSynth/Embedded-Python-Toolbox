@@ -5,7 +5,7 @@ set -e
 echo ""
 echo "Setting environment variables"
 source ../set_envars
-export LOGFILE=$PWD/"5_circuitpython.log"
+export LOGFILE=$PWD/"build_circuit_python.log"
 rm --force $LOGFILE
 
 mkdir --parents $HOME/Projects
