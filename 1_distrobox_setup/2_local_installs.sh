@@ -32,7 +32,7 @@ echo "Installing Starship"
 export BIN_DIR=$HOME/.local/bin
 curl -sS https://starship.rs/install.sh | sh
 mkdir --parents $HOME/.config
-starship preset nerd-font-symbols -o $HOME/.config/starship.toml
+cp starship.toml $HOME/.config/starship.toml
 
 echo "Adding Starship prompt to bash"
 echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
