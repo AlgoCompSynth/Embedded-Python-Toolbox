@@ -12,6 +12,7 @@ rm --force $LOGFILE
 echo "Installing base packages"
 export DEBIAN_FRONTEND=noninteractive
 /usr/bin/time sudo apt-get install --assume-yes \
+  alsa-utils \
   apt-file \
   bash-completion \
   build-essential \
@@ -21,6 +22,8 @@ export DEBIAN_FRONTEND=noninteractive
   gettext \
   git \
   git-lfs \
+  libffi-dev \
+  libsdl2-dev \
   lsb-release \
   lynx \
   man-db \
