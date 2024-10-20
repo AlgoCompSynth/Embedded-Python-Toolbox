@@ -40,10 +40,14 @@ export RISCV_COMPILER_TARBALL="corev-openhw-gcc-$RISCV_COMPILER_VERSION.tar.gz"
 export RISCV_COMPILER_URL="https://buildbot.embecosm.com/job/corev-gcc-ubuntu2204/47/artifact/$RISCV_COMPILER_TARBALL"
 export RISCV_COMPILER_PATH="$HOME/.local"
 
-# Tulip Creative Computer / AMY
-export TULIPCC_URL="--branch v-oct-2024 https://github.com/shorepine/tulipcc.git"
-export TULIPCC_PATH="$HOME/Projects/tulipcc"
+# CircuitPython
+export CIRCUITPYTHON_URL="https://github.com/adafruit/circuitpython.git"
+export CIRCUITPYTHON_PATH="$HOME/Projects/circuitpython"
 
 # MicroPython
 export MICROPYTHON_URL="--branch v1.23.0 https://github.com/micropython/micropython.git"
 export MICROPYTHON_PATH="$HOME/Projects/micropython"
+
+# Tulip Creative Computer / AMY
+export TULIPCC_URL="--branch v-oct-2024 https://github.com/shorepine/tulipcc.git"
+export TULIPCC_PATH="$HOME/Projects/tulipcc"

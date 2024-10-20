@@ -14,16 +14,19 @@ pushd $MICROPYTHON_PATH/..
   rm -fr $MICROPYTHON_PATH
   /usr/bin/time git clone $MICROPYTHON_URL \
     >> $LOGFILE 2>&1
-  popd
+popd
 
-pushd $HOME/Projects/micropython/ports/unix
+pushd $MICROPYTHON_PATH
   echo "Building mpy-cross"
-  make -C ../../mpy-cross \
+  make -C mpy-cross \
     >> $LOGFILE 2>&1
+popd
+
+pushd $MICROPYTHON_PATH/ports/unix
   echo "Fetching submodules"
   /usr/bin/time make submodules -j`nproc` \
     >> $LOGFILE 2>&1
-  echo "Building executable"
+  echo "Building Unix port"
   /usr/bin/time make -j`nproc` \
     >> $LOGFILE 2>&1
   echo "Copying micropython to $HOME/.local/bin"
