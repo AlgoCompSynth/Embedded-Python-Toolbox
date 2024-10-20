@@ -28,6 +28,7 @@ export DEBIAN_FRONTEND=noninteractive
   lynx \
   man-db \
   minicom \
+  pkg-config \
   plocate \
   python3-dev \
   python3-pip \
