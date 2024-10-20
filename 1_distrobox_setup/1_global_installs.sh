@@ -28,8 +28,10 @@ export DEBIAN_FRONTEND=noninteractive
   lynx \
   man-db \
   minicom \
+  ninja-build \
   pkg-config \
   plocate \
+  python-is-python3 \
   python3-dev \
   python3-pip \
   python3-setuptools \
