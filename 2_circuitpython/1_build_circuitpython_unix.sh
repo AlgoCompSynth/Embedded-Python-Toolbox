@@ -18,7 +18,7 @@ pushd $CIRCUITPYTHON_PATH/..
 popd
 
 pushd $CIRCUITPYTHON_PATH
-  echo "Fetching submodules"
+  echo "Fetching all submodules"
   /usr/bin/time make fetch-all-submodules \
     >> $LOGFILE 2>&1
   echo "Creating / activating fresh virtual environment $CIRCUITPYTHON_VENV/"

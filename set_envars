@@ -1,5 +1,5 @@
 # base image for container
-export DBX_CONTAINER_IMAGE="docker.io/library/ubuntu:22.04"
+export DBX_CONTAINER_IMAGE="docker.io/library/ubuntu:24.04"
 echo "DBX_CONTAINER_IMAGE: $DBX_CONTAINER_IMAGE"
 
 # name to use for the container
