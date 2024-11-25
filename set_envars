@@ -53,3 +53,5 @@ export MICROPYTHON_PATH="$HOME/Projects/micropython"
 # Tulip Creative Computer / AMY
 export TULIPCC_URL="--branch v-nov-2024 https://github.com/shorepine/tulipcc.git"
 export TULIPCC_PATH="$HOME/Projects/tulipcc"
+export AMY_URL="--branch 1.0.3 https://github.com/shorepine/amy.git"
+export AMY_PATH="$HOME/Projects/amy"

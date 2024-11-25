@@ -5,7 +5,7 @@ set -e
 echo ""
 echo "Setting environment variables"
 source ../set_envars
-export LOGFILE=$PWD/1_tulipcc_desktop.log
+export LOGFILE=$PWD/2_tulipcc_desktop.log
 rm --force $LOGFILE
 
 echo "Cloning fresh tulipcc project repository"
