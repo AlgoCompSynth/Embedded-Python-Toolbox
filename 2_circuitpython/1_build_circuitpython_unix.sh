@@ -18,9 +18,6 @@ pushd $CIRCUITPYTHON_PATH/..
 popd
 
 pushd $CIRCUITPYTHON_PATH
-  echo "Fetching all submodules"
-  /usr/bin/time make fetch-all-submodules \
-    >> $LOGFILE 2>&1
   echo "Creating / activating fresh virtual environment $CIRCUITPYTHON_VENV/"
   rm --force --recursive $CIRCUITPYTHON_VENV/
   python3 -m venv $CIRCUITPYTHON_VENV/ --upgrade-deps
@@ -30,6 +27,8 @@ pushd $CIRCUITPYTHON_PATH
   /usr/bin/time pip3 install --upgrade -r requirements-dev.txt \
     >> $LOGFILE 2>&1
   /usr/bin/time pip3 install --upgrade -r requirements-doc.txt \
+    >> $LOGFILE 2>&1
+  /usr/bin/time pip3 install --upgrade huffman \
     >> $LOGFILE 2>&1
 
   echo "Building mpy-cross"
@@ -42,6 +41,7 @@ pushd $CIRCUITPYTHON_PATH/ports/unix
   /usr/bin/time make submodules -j`nproc` \
     >> $LOGFILE 2>&1
   echo "Building Unix port"
+  export VARIANT=standard
   /usr/bin/time make -j`nproc` \
     >> $LOGFILE 2>&1
   echo "Copying circuitpython to $HOME/.local/bin"
