@@ -46,7 +46,8 @@ export CIRCUITPYTHON_URL="--branch $CIRCUITPYTHON_VERSION https://github.com/ada
 export CIRCUITPYTHON_PATH="$HOME/Projects/circuitpython"
 
 # MicroPython
-export MICROPYTHON_URL="--branch v1.23.0 https://github.com/micropython/micropython.git"
+export MICROPYTHON_VERSION="v1.24.0"
+export MICROPYTHON_URL="--branch $MICROPYTHON_VERSION https://github.com/micropython/micropython.git"
 export MICROPYTHON_PATH="$HOME/Projects/micropython"
 
 # Tulip Creative Computer / AMY
