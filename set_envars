@@ -41,7 +41,8 @@ export RISCV_COMPILER_URL="https://buildbot.embecosm.com/job/corev-gcc-ubuntu220
 export RISCV_COMPILER_PATH="$HOME/.local"
 
 # CircuitPython
-export CIRCUITPYTHON_URL="https://github.com/adafruit/circuitpython.git"
+export CIRCUITPYTHON_VERSION="9.2.1"
+export CIRCUITPYTHON_URL="--branch $CIRCUITPYTHON_VERSION https://github.com/adafruit/circuitpython.git"
 export CIRCUITPYTHON_PATH="$HOME/Projects/circuitpython"
 
 # MicroPython
