@@ -49,5 +49,5 @@ export MICROPYTHON_URL="--branch v1.23.0 https://github.com/micropython/micropyt
 export MICROPYTHON_PATH="$HOME/Projects/micropython"
 
 # Tulip Creative Computer / AMY
-export TULIPCC_URL="--branch v-oct-2024 https://github.com/shorepine/tulipcc.git"
+export TULIPCC_URL="--branch v-nov-2024 https://github.com/shorepine/tulipcc.git"
 export TULIPCC_PATH="$HOME/Projects/tulipcc"
