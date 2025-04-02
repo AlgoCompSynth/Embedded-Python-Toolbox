@@ -50,6 +50,11 @@ export MICROPYTHON_VERSION="v1.24.1"
 export MICROPYTHON_URL="--branch $MICROPYTHON_VERSION https://github.com/micropython/micropython.git"
 export MICROPYTHON_PATH="$HOME/Projects/micropython"
 
+# Pico-Ice MicroPython
+export PICO_ICE_MICROPYTHON_VERSION="v1.1.1"
+export PICO_ICE_MICROPYTHON_URL="--branch $PICO_ICE_MICROPYTHON_VERSION https://github.com/tinyvision-ai-inc/pico-ice-micropython.git"
+export PICO_ICE_MICROPYTHON_PATH="$HOME/Projects/pico-ice-micropython"
+
 # Tulip Creative Computer / AMY
 export TULIPCC_URL="--branch v-apr-2025 https://github.com/shorepine/tulipcc.git"
 export TULIPCC_PATH="$HOME/Projects/tulipcc"
