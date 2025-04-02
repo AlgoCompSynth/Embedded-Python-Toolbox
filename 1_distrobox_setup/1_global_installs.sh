@@ -6,14 +6,6 @@ echo "Defining LOGFILE"
 export LOGFILE=$PWD/1_global_installs.log
 rm --force $LOGFILE
 
-echo "Adding git PPA"
-/usr/bin/time ./add_git_ppa.sh \
-  >> $LOGFILE 2>&1
-
-echo "Restoring missing man pages"
-/usr/bin/time ./unminimize.sh \
-  >> $LOGFILE 2>&1
-
 echo "Installing base packages"
 export DEBIAN_FRONTEND=noninteractive
 /usr/bin/time sudo apt-get install --assume-yes \
